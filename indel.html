@@ -12,10 +12,12 @@
             line-height: 1.6;
             margin: 0;
             padding: 0 20px;
+            background-image: linear-gradient(to bottom, #0a0a2a, #002244), url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22100%25%22 height%3D%22100%25%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22none%22 stroke%3D%22%23ffffff%22 stroke-width%3D%220.5%22/%3E%3C/svg%3E');
+            background-size: 40px 40px;
         }
 
         h1, h2, h3 {
-            color: #ffcc00;
+            color: #33ccff;
             text-align: center;
         }
 
@@ -26,7 +28,7 @@
 
         h2 {
             margin-top: 30px;
-            border-bottom: 2px solid #ffcc00;
+            border-bottom: 2px solid #33ccff;
             display: inline-block;
         }
 
@@ -35,14 +37,26 @@
             text-align: center;
             font-size: 1.2em;
             margin-bottom: 30px;
+            color: #99ccff;
         }
 
         .section {
             margin-bottom: 40px;
+            border: 1px solid #33ccff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.8);
         }
 
         .highlight {
             color: #ff6600;
+        }
+
+        ul li:hover {
+            background-color: #333366;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         footer {
@@ -54,12 +68,37 @@
         }
 
         footer a {
-            color: #ffcc00;
+            color: #33ccff;
             text-decoration: none;
         }
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        .progress-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .progress-bar {
+            height: 20px;
+            width: 0;
+            background-color: #33ccff;
+            border-radius: 25px;
+            animation: progress-animation 10s linear forwards;
+        }
+
+        @keyframes progress-animation {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -86,13 +125,20 @@
 
     <div class="section">
         <h2>The Fallout Gourmet Oven: Technical Breakdown</h2>
+        <img src="assets/images/fallout_gourmet_oven_diagram.png" 
+             alt="Fallout Gourmet Oven Diagram" 
+             style="display: block; margin: 20px auto; max-width: 80%; border: 2px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.8);">
         <ul>
             <li><strong>Thermal Shielding and Insulation:</strong> Tungsten-alloy shell with aerogel insulation and ceramic lining to distribute heat evenly. Phase-change materials store and release heat like a high-tech Easy-Bake Oven on steroids.</li>
             <li><strong>Dynamic Positioning System:</strong> GPS-guided robotic movement to maintain optimal temperature zones. Gyroscopic stabilizers counter shockwaves to keep your dinner intact.</li>
             <li><strong>Cooking Strategy:</strong> Heat storage and phase-change materials regulate cooking temperatures (~425°F). Breadsticks cook first (10-12 minutes), followed by pizza (15 minutes) for golden perfection.</li>
             <li><strong>Post-Cooking Retrieval:</strong> Lead-lined tools and decontamination chambers ensure safety. Multitasking tools double as raider defense weapons.</li>
         </ul>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
     </div>
+    
 
     <div class="section">
         <h2>Advanced Features</h2>
